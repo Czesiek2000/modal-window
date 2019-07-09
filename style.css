@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* color: #444; */
+    /* background-color: slategray; */
+}
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.btn {
+    background-color: #B7D1E8;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+        0 5px 8px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalanim;
+    animation-duration: 1s;
+    border-radius: 0.3125rem;
+}
+
+.modal-header h2{
+    margin: 0;
+}
+
+.modal-header {
+    margin-bottom: 10px;
+}
+
+.close {
+    color: #000;
+    float: right;
+    font-size: 30px;
+}
+
+.close:hover,
+.close:focus {
+    color: coral;
+    text-decoration: none;
+    cursor: pointer;
+    animation-name: rotation;
+    animation-duration: 0.5s;
+}
+
+
+@keyframes modalanim {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.action {
+    margin-left: 10px;
+    padding: 7px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.action:first-child {
+    background-color: #2ecc71 ;
+}
+
+.action:last-child {
+    background-color: #e74c3c;
+}
+
+
+/* Second modal */
+.modal2-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 60%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+        0 5px 8px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modal2anim;
+    animation-duration: 1s;
+    border-radius: 0.3125rem;
+}
+
+.modal2-header h2,
+.modal2-footer h3 {
+    margin: 0;
+}
+
+.modal2-header {
+    background-color:blue;
+    color: #fff;
+    padding: 20px;
+}
+
+.modal2-body {
+    padding: 15px 20px;
+}
+
+.modal2-footer {
+    background-color: lightblue;
+    padding: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.close2 {
+    color: #fff;
+    float: right;
+    font-size: 30px;
+}
+
+.close2:hover,
+.close2:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    animation-name: rotation;
+    animation-duration: 0.5s;
+}
+
+@keyframes modal2anim {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
